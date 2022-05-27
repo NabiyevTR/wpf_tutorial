@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApplication.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApplication"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:model="clr-namespace:WpfApplication.model"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="800">
+    <Grid Margin="10">
+        <DataGrid x:Name="CircuitsGrid" AutoGenerateColumns="False" ItemsSource="{DynamicResource ResourceKey=phones}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Number" Binding="{Binding LineNumber}" />
+                <DataGridTextColumn Header="Description" Binding="{Binding LineDescription}" />
+                
+                
+                <DataGridTextColumn Header="Power" Binding="{Binding Power}" />
+                <DataGridTextColumn Header="SinglePhase" Binding="{Binding SinglePhase}" />
+                <DataGridTextColumn Header="Voltage" Binding="{Binding Voltage}" />
+                <DataGridTextColumn Header="PowerFactor" Binding="{Binding PowerFactor}" />
+                <DataGridTextColumn Header="Current" Binding="{Binding Current}" />
+                
+                <!--<DataGridTextColumn Header="Birthday" Binding="{Binding Number}" />-->
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+
+</Window>
